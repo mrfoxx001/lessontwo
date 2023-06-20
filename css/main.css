@@ -1,0 +1,47 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+body{
+    background:url('../img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+.section{
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: azure;
+    width: 80%;
+}
+
+.dob_section{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+
+.dob, .dob_btn{
+    padding: 14px 18px;
+}
+
+.display{
+    background-color: rgb(19, 17, 13);
+    color: #fff;
+    padding: 10px 20px;
+}
+
+p{
+    text-align: center;
+}
