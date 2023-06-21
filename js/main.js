@@ -98,9 +98,9 @@ console.log(div);
 console.log(div2);
 
 
-const dob = document.querySelector(".dob");
+const dob     = document.querySelector(".dob");
 const dob_btn = document.querySelector(".dob_btn");
-const disp = document.querySelector(".display");
+const disp    = document.querySelector(".display");
 
 function calculateAge(dt) {
   if (dt) {
@@ -125,7 +125,82 @@ dob_btn.addEventListener("click", function () {
   calculateAge(dob.value);
 });
 
+// dob_btn.onclick = function(){
+//   console.log(dob.value);
+//   calculateAge(dob.value);
+// }
+
 dob.addEventListener("change", function (e) {
   console.log(e.target.value);
   calculateAge(e.target.value);
 });
+
+
+
+
+
+// WORKING WITH FROMS
+let form = document.forms;
+console.log(form);
+console.log(form[0]);             // the first form on the page
+console.log(form.signup__form);  // the form on the page by its name
+console.log(form.length);       // the count of the number of forms on the page
+
+form.signup__form.addEventListener('submit',function(e){
+    e.preventDefault();   // prevent default behavuiour of the form
+    // location.href = e.target.action; // redirecting to the action url
+    let uname = document.getElementById("username").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let pass  = document.getElementById("password").value.trim();
+    let uType  = document.getElementById("userType").value.trim();
+    console.log(uname , email , pass, uType);
+});
+
+
+// attaching an event listener to the username field
+form.signup__form.elements[0].addEventListener("keyup", function(e){
+    //  console.log(e.target.value);
+     console.log(e.keyCode , e.which);
+});
+
+
+form.signup__form.elements[0].addEventListener("mouseenter", function(e){
+   console.log(e);
+});
+
+form.signup__form.elements[0].addEventListener("mouseleave", function(e){
+  console.log(e);
+});
+
+form.signup__form.elements[0].addEventListener("focus", function(e){
+  console.log("Yeah yu have gained focus");
+});
+
+
+document.body.onmousemove = function(e){
+    console.log(e.pageX, e.pageY);
+    console.log(e.screenX, e.screenY);
+}
+
+
+
+
+// Attaching event to the pssword input
+form.signup__form.elements[2].onkeyup = function(e){
+    if(e.target.value.trim().length >=6){
+       console.log(e.target.value);
+       e.target.style.border = '4px solid green';
+    }else{
+      e.target.style.border = '4px solid red';
+      console.log("Password must be at least 6 characters");
+    }
+}
+
+
+
+
+
+
+
+
+
