@@ -177,10 +177,11 @@ form.signup__form.elements[0].addEventListener("focus", function(e){
 });
 
 
-document.body.onmousemove = function(e){
-    console.log(e.pageX, e.pageY);
-    console.log(e.screenX, e.screenY);
-}
+// attaching the mousemove event to the body element
+// document.body.onmousemove = function(e){
+//     console.log(e.pageX, e.pageY);
+//     console.log(e.screenX, e.screenY);
+// }
 
 
 
@@ -194,6 +195,89 @@ form.signup__form.elements[2].onkeyup = function(e){
       e.target.style.border = '4px solid red';
       console.log("Password must be at least 6 characters");
     }
+}
+
+
+
+
+
+
+/// INPUT VALIDATION
+const result = document.querySelector('p.result');
+const inp    = form.signup__form.elements[4];
+inp.oninput = function(evt){
+    // console.log(evt);
+    if(inp.checkValidity()){
+      // result.style.backgroundColor ="palegreen";
+      // result.innerHTML = "Input Ok";
+    }else{
+      // result.style.backgroundColor ="#FF0";
+      // result.innerHTML = inp.validationMessage;
+    }
+}
+
+// checjking for validaity of an input value using oncjage event 
+inp.onchange = function(e){
+  console.log( e.target.validity.valid);
+  if(e.target.validity.valid){
+     
+  }
+}
+
+
+
+
+// COnditionlas
+/*
+1. if - statement
+2. if - else statement
+3. if - else - if statement
+4. switch statement
+*/
+
+// if statement
+let testNum = 0;
+
+if (testNum > 10){
+  console.info("Valid", testNum);
+}else{
+  console.error("Wrong input")
+}
+
+
+// if-else-if
+if (testNum > 10){
+  console.info("Valid", testNum);
+}else if(testNum >=11 && testNum<=20){
+  console.log("11 - 20 Range");
+}else if(testNum == 40){
+  console.log("sTILL Within Range");
+}else{
+  console.error("Out of Range");
+}
+
+
+
+// switch
+let banky = "FCMB";
+
+switch(banky){
+   case "ZENITH":
+      console.log("Hello Weclome tp Zenith Bank");
+   break;
+
+   case "FIRST":
+    console.log("Hello Weclome to FIRST Bank");
+   break;
+
+   case "FIDELITY":
+    console.log("Hello Weclome to FIDELITY Bank");
+   break;
+
+   default:
+    console.log("Sorry your bank is not available");
+   break;
+
 }
 
 

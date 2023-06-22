@@ -33,10 +33,10 @@
               </div>
               <div class="form-floating mb-3">
                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" required />
-                <label for="password">Password</label>
+                <label for="password">Password <span class="required">*</span></label>
               </div>
 
-              <div class="form-floating">
+              <div class="form-floating mb-3">
                   <select class="form-control" name="userType" id="userType"  required >
                       <option disabled selected value=""> Select usertype</option>
                       <option value="ADMIN">Admin</option>
@@ -44,6 +44,11 @@
                   </select> 
               </div>
 
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" step="5" min="10" max="250" name="num" id="num" placeholder="Number of seat" required />
+                <label for="num">Number of seats</label>
+              </div>
+              <p class="result"></p>
               <button type="submit" class="btn btn-primary btn-lg mx-auto my-4">SignUp</button>
 
          </form>
