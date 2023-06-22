@@ -259,7 +259,7 @@ if (testNum > 10){
 
 
 // switch
-let banky = "FCMB";
+let banky = "FCMB";  
 
 switch(banky){
    case "ZENITH":
