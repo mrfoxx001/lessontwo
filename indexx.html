@@ -9,6 +9,20 @@
   
 </head>
 <body>
+
+  <nav>
+      <div><a href="">MR PETERS</a></div>
+
+      <ul>
+        <li><a href="#"></a>Home</li>
+        <li>Deals<a href="#"></a></li>
+        <li><a href="#"></a>Best Sellers</li>
+        <li><a href="#"></a>About</li>
+        <li><a href="#"></a>Refrence</li>
+      </ul>
+      <!-- <div><i class="bx bx-menu"></i></div> -->
+    </nav>
+
     
     <div class="section">
            <div class="dob_section">
@@ -21,19 +35,35 @@
 
 <!--  SIGNUP SECTION -->
     <div class="signup__section bg-danger p-4 border my-4 w-50">
-         <form action="" class="signup" id="signup">
+         <form action=".php" class="signup" id="signup" name="signup__form" method="post">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="username" placeholder="username" required />
                 <label for="username">Username</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required />
                 <label for="email">Email address</label>
               </div>
-              <div class="form-floating">
-                <input type="password" class="form-control" id="password" placeholder="Password" required />
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" name="userType" id="userType" placeholder="Password" required />
                 <label for="password">Password</label>
               </div>
+
+              <div class="form-floating mb-3">
+                <select   class="form-control" name="userType" id="userType"  required>
+                      <option disabled selected value="">select usertype</option>
+                      <option value="ADMIN">Admin</option>
+                      <option value="USER">User</option>
+                </select>
+                
+                
+              </div>
+
+             
+                <input type="number" class="form-control" name="num" id="num" placeholder="number of seat" required />
+              
+              </div>
+              
 
               <button type="submit" class="btn btn-primary btn-lg mx-auto my-4">SignUp</button>
 
@@ -45,14 +75,14 @@
     <!-- LOGIN SECTION -->
     <div class="login__section bg-warning p-4 border my-4 w-50">
 
-        <form action="" class="signup" id="signup">
+        <form action="" class="login" id="login" name="login__form">
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="username" placeholder="username or email"  required/>
               <label for="username">Username/Email</label>
             </div> 
             <div class="form-floating">
-              <input type="password" class="form-control" id="password" placeholder="Password" required />
-              <label for="password">Password</label>
+              <input type="password" class="form-control" id="login__password" placeholder="Password" required />
+              <label for="login__password">Password</label>
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg mx-auto my-4">Login</button>

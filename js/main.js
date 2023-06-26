@@ -129,3 +129,139 @@ dob.addEventListener("change", function (e) {
   console.log(e.target.value);
   calculateAge(e.target.value);
 });
+
+
+
+
+//working with forms 
+let form = document.forms;
+console.log(form);
+console.log(form[0]);       // the first form on the page
+console.log(form.signup__form);//the form on the page by its name 
+console.log(form.length);// the count of the number of forms on the page 
+
+form.signup__form.addEventListener('submit', function (e){
+  e.preventDefault();     //prevent default behavior of the form 
+  // location.href = e.target.action; // redirecting to the action url
+  let uname = documen.getElementById("username").value.trim();
+  let email = documentt.getElementById("email").value.trim();
+  let pass = document.getElementById("password").value.trim();
+  let Utype = document.getElementById("usertype").value.trim();
+
+  console.log(uname, email, pass);
+
+});
+
+//attaching an event listener to the userame field
+form.signup__form.elements[0].addEventListener("keyup", function (e) {  //we  have key up as well
+  // console.log(e.target.value);
+  console.log(e.keycode, e.which);     // to know which alphabet the user entered
+  
+})
+
+form.signup__form.elements[0].addEventListener("mousecenter", function (e) {
+console.log(e);
+});
+
+form.signup__form.elements[0].addEventListener("mouseleave", function (e) {
+  
+console.log(e);
+});
+ 
+form.signup__form.elements[0].addEventListener("focus", function (e) {
+  console.log("yeah you have gained foucs");
+});
+//attaching the mouse event to the body element
+document.body.onmousemove = function (e) { 
+  console.log(e.pagex, e.pagey);
+  console.log(e.screenx, e.screeny);
+
+
+
+  //attaching event to the pssword input
+  form.signup__form.elements[2].onkeyup = function (e) {
+    if (e.target.styel
+}
+
+
+
+
+
+
+
+
+
+
+//input validation 
+  const result = document.querySelector('p.result');
+  const inp = form.signup__form.elements[4];
+  inp.oninput = function (evt) {
+    //console.log(evt.);
+    if (inp.checkvalidity()) {
+      result.style.backgroundcolor = "palegreen";
+      result.style.innerHTML = "input ok";
+
+    } else {
+      result.style.style.backgroundcolor = "pink";
+      result.innerHTML = inp.validationMessage;
+    }
+
+
+    //checking for validity of an input value using oncjage event
+    inp.onchange = function (e) {
+      console.log(e.target.checked);
+    }
+
+    //conditionslas
+    /*
+    1. if - statement
+    2. if - else statement
+    3. if - else-if statement
+    4. switch statement
+    */
+   
+   //if statement
+    let testNum = 90;
+
+    if (testNum > 10){
+      console.info("valid", testNum);
+    } else {
+      console.error("wrong input");
+    }
+
+
+    //if else  if
+    if (testNum > 10) {
+      console.info("valid", testNum);
+    } else if (testNum >= 11 && testNum <= 20) {
+      console.log("11-20 range");
+    } else if (testNum == 40) {
+      console.log("still within range");
+      
+    } else {
+      console.error("out of range");
+    }
+
+
+    // switch 
+
+       let banky = "zenith";
+
+       switch (banky) {
+       case "zenith":
+        
+        console.log("welcome to zenith bank ");
+        break;
+        
+        case "first ":
+          console.log("welcome to first bank ");
+          break;
+          
+         case "fidelity";
+           console.log("hello welcome to fidelity bank");
+           break;
+         
+         default:
+           console.log("sorry your bank is not available");
+           break;  
+        }

@@ -45,3 +45,47 @@ body{
 p{
     text-align: center;
 }
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+  
+  top: 0;
+  align-items: center;
+  padding-top: 25px 0;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+nav div{
+  /* background-color: white; */
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+ 
+  margin-right: 30rem;
+  font-weight: 900;
+
+}
+
+nav ul{
+    display: flex;
+  gap: 90px;
+  list-style: none;
+  text-transform: capitalize;
+  color:goldenrod;
+
+ 
+  
+
+}
+nav div a {
+  text-decoration: none;
+  color:gold;
+  font-size: larger;
+
+}
